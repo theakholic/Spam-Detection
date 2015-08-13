@@ -5,7 +5,7 @@ PATH_TO_GOOD = r'F:/Python/Text_Files/good.txt'
 PATH_TO_BAD = r'F:/Python/Text_Files/bad.txt'
 
 
-def spamicity(word, p_good, p_bad):
+def conditional_spam(word, p_good, p_bad):
     """
     Return the probability that a mail is spam given that word is present in it.
     p_good is a dict with p_good[w] = P(w|good)
@@ -50,11 +50,12 @@ def read_file(path_to_file):
 def load_dicts():
     p_bad = read_file(PATH_TO_BAD)
     p_good = read_file(PATH_TO_GOOD)
-    return p_bad, p_good
+    #print('returing good first')
+    return p_good, p_bad
 
 def main():
     print('Loading data...')
-    p_bad, p_good = load_dicts()
+    p_good,p_bad = load_dicts()
     print('Loaded.')
 
 

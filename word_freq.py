@@ -1,3 +1,4 @@
+import string
 def word_freq(s):
     """Return dict of word frequences in the string."""
     freq = {}
